@@ -2,57 +2,57 @@
 'https://plantuml.com/sequence-diagram
 
 class Main
-class UI
-class turnament
-class teams
+class TextUI
+class Turnament
+class Teams
 Interface IO
-class match
-class fileIO
+class Match
+class FileIO
 
-Main *-- turnament
+Main *-- Turnament
 
-turnament *-- UI
-turnament *-- IO
-turnament *-- teams
-turnament *-- match
+Turnament *-- TextUI
+Turnament *-- IO
+Turnament *-- Teams
+Turnament *-- Match
 
-IO *-- fileIO
+IO *-- FileIO
 
-Main : Turnament turnament = new Turnament
-Main : turnament.startTurnament()
+Main : Turnament turnament = new Turnament();
+Main : turnament.startTurnament();
 
-match : teamId(ArrayList<teams>))
+Match : teamId(ArrayList<teams>);
 
-IO : readTurnamentData()
-IO : saveTurnemantData()
-IO : readTeamData()
-IO : saveTeamData()
+IO : readTurnamentData();
+IO : saveTurnemantData();
+IO : readTeamData();
+IO : saveTeamData();
 
-teams : int goalScore
-teams : int points
-teams : String teamName
-teams : String playerName
-teams : createTeams()
-teams : setGoalScore()
-teams : getGoalScore()
-teams : setPoints()
-teams : getPoints()
+Teams : int goalScore;
+Teams : int points;
+Teams : String teamName;
+Teams : String playerName;
+Teams : createTeams();
+Teams : setGoalScore();
+Teams : getGoalScore();
+Teams : setPoints();
+Teams : getPoints():
+Teams : boolean winner;
 
+Turnament : String time;
+Turnament : String date;
+Turnament : createRound();
+Turnament : TextUI ui;
+Turnament : FileIO fileIO;
 
-turnament : String time
-turnament : String date
-turnament : createRound()
-turnament : UI ui
-turnament : FileIO fileIO
+Turnament : createNewTurnament();
+Turnament : currentTurnament();
+Turnament : startTurnmanet();
+Turnament : match();
 
-turnament : createNewTurnament()
-turnament : currentTurnament()
-turnament : startTurnmanet()
-turnament : Match match1
-
-UI : newResults()
-UI : seeSchedule()
-UI : mainMenu()
-UI : Arraylist<String> getTeamInfo
+TextUI : newResults();
+TextUI : seeSchedule();
+TextUI : mainMenu();
+TextUI : Arraylist<String> getTeamInfo
 
 @enduml
