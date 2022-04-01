@@ -1,0 +1,58 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Main
+class UI
+class turnament
+class teams
+Interface IO
+class match
+class fileIO
+
+Main *-- turnament
+
+turnament *-- UI
+turnament *-- IO
+turnament *-- teams
+turnament *-- match
+
+IO *-- fileIO
+
+Main : Turnament turnament = new Turnament
+Main : turnament.startTurnament()
+
+match : teamId(ArrayList<teams>))
+
+IO : readTurnamentData()
+IO : saveTurnemantData()
+IO : readTeamData()
+IO : saveTeamData()
+
+teams : int goalScore
+teams : int points
+teams : String teamName
+teams : String playerName
+teams : createTeams()
+teams : setGoalScore()
+teams : getGoalScore()
+teams : setPoints()
+teams : getPoints()
+
+
+turnament : String time
+turnament : String date
+turnament : createRound()
+turnament : UI ui
+turnament : FileIO fileIO
+
+turnament : createNewTurnament()
+turnament : currentTurnament()
+turnament : startTurnmanet()
+turnament : Match match1
+
+UI : newResults()
+UI : seeSchedule()
+UI : mainMenu()
+UI : Arraylist<String> getTeamInfo
+
+@enduml

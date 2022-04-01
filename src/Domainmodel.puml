@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+object Teams
+object TurnamentLeader
+object Rules
+object turnament
+object players
+object matches
+object results
+
+turnament *-- Rules
+turnament *-- matches
+turnament *-- results
+matches *-- Teams
+Teams *-- players
+players *-- TurnamentLeader
+results *-- TurnamentLeader
+@enduml
