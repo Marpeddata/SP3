@@ -1,14 +1,27 @@
+import java.util.ArrayList;
+
 public class Teams {
     int goalScore;
     int points;
     String teamName;
     String playerName;
-
+    ArrayList<String> teamList;
+/*
     public void createTeams(){
 
     }
+*/
+
+    public void addPlayer(String playerName){
+        teamList.add(playerName);
+    }
+
+    public String getTeamName(){
+        return teamName;
+    }
 
     public void setGoalScore(int goalScore){
+
         this.goalScore = goalScore;
     }
 
@@ -31,6 +44,8 @@ public class Teams {
     public void seeSchedule(){
 
     }
+
+
 
 
 }
