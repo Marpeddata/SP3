@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public interface IO {
-    String readTurnamentData();
-    String saveTurnemantData();
-    String readTeamData();
-    String saveTeamData();
+    ArrayList<Match> readTournamentData();
+    void saveTournamentData(ArrayList<Tournament> tournament);
+    ArrayList<Team> readTeamData();
+    void saveTeamData();
 }

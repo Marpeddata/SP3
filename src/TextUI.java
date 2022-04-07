@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class TextUI {
     ArrayList<String> getTeamInfo = new ArrayList<>();
     Match match;
-    FileIO data;
+    FileIO data = new FileIO();
 
 
 
@@ -34,7 +34,7 @@ public class TextUI {
 
                 break;
             case "5":
-                data.saveTurnemantData();
+                //data.saveTournamentData();
                 break;
 
         }

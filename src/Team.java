@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Teams {
+public class Team {
     int goalScore;
     int points;
     String teamName;

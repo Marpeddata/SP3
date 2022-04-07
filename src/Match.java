@@ -3,11 +3,11 @@ public class Match {
     private int team2Score;
     private int points;
     private String dateTime;
-    private Teams team1;
-    private Teams team2;
+    private Team team1;
+    private Team team2;
 
 
-    public Match(Teams team1, Teams team2) {
+    public Match(Team team1, Team team2) {
         this.team1 = team1;
         this.team2 = team2;
 
