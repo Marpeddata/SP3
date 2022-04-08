@@ -1,19 +1,19 @@
+package com.company;
+
 import java.util.ArrayList;
 
 public class Team {
     int goalScore;
     int points;
     String teamName;
-    String playerName;
-    ArrayList<String> teamList;
-/*
-    public void createTeams(){
+    ArrayList<String> playerList = new ArrayList<>();
 
+    public Team(String teamName) {
+        this.teamName = teamName;
     }
-*/
 
     public void addPlayer(String playerName){
-        teamList.add(playerName);
+        playerList.add(playerName);
     }
 
     public String getTeamName(){
@@ -46,6 +46,15 @@ public class Team {
     }
 
 
+    @Override
+    public String toString() {
 
+        String playerNames = "";
 
+        for (String s : playerList) {
+            playerNames += s + ",";
+        }
+
+        return this.teamName+","+playerNames+this.goalScore+","+this.points;
+    }
 }

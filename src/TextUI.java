@@ -1,3 +1,5 @@
+package com.company;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,6 +10,7 @@ public class TextUI {
 
 
 
+        // Her antager vi at vi allerede har teams og matches data
     public void mainMenu(){
         Scanner menuInput = new Scanner(System.in);
         String input;

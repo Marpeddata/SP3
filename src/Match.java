@@ -1,3 +1,5 @@
+package com.company;
+
 public class Match {
     private int team1Score;
     private int team2Score;
@@ -23,27 +25,16 @@ public class Match {
 
     public void setTeam1Score(int team1Score) {
         this.team1Score = team1Score;
+    }
 
+    public void setTeam2Score(int team2Score) {
+        this.team2Score = team2Score;
     }
 
     public void setMatchScore(int team2Score){
         this.team2Score = team2Score;
-
     }
 
-
-/*
-    public void whoWon() {
-        if (team1Score > team2Score) {
-            team1.add.nextRound(); //arrayList
-            team1.setPoints(team1.getPoints() + 2);
-        }
-        if (team2Score > team1Score) {
-            team2.add.nextRound(); //arrayList
-            team2.setPoints(team2.getPoints() + 2);
-        }
-    }
-*/
     public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
@@ -66,5 +57,13 @@ public class Match {
             team2.setGoalScore(goalScoreWinner);
             team1.setGoalScore(goalScoretLooser);
         }
+    }
+
+    @Override
+    public String toString() {
+        if (this.team1 == null || this.team2 == null)
+            return "null,null,0,0";
+
+        return this.team1.getTeamName()+","+this.team2.getTeamName()+","+this.team1Score+","+this.team2Score;
     }
 }
